@@ -24,7 +24,7 @@
             return Math.pow(a, b);
         }
 
-        public double raiz(int a) {
+        public double raiz(double a) {
             if (a < 0) {
                 throw new ArithmeticException("Número negativo");
             }
@@ -42,7 +42,7 @@
             return fatorial;
         }
 
-        public double media(int[] numeros) {
+        public double media(double[] numeros) {
             double soma = 0;
             for (int i = 0; i < numeros.length; i++) {
                 soma += numeros[i];
@@ -50,7 +50,7 @@
             return soma / numeros.length;
         }
 
-        public boolean primo(int a) {
+        public boolean primo(double a) {
             if (a <= 1) {
                 return false;
             }
@@ -61,20 +61,9 @@
             }
             return true;
         }
-        public double somar(double a) {
-            int soma = 0;
-
-
-            while (a > 0) {
-                soma += a % 10;
-                a /= 10;
-            }
-
-            return soma;
-        }
 
         public static void main(String[] args) {
-            int[] numero = {1,2,3,4,5};
-            System.out.println(new calculadora().somar(511));
+            double[] numero = {1,2,3,4,5};
+            System.out.println(new calculadora().soma(2,3));
         }
     }
